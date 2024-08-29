@@ -36,6 +36,8 @@ applications for mobile devices: although this territory is still waiting to be 
 | `print("My", "name", "is", "Monty", "Python.", sep="-")` | keyword verwenden, hier im beispiel sep="-". Es wird zwischen den zeilen überall "-" ausgegeben, so wird es dann ausgegeben: My-name-is-Monty-Python. |
 |`end="*"`| keyword end, wird am ende des satzes verwendet und angegeben |
 
+### Summary
+
 1. Literals are notations for representing some fixed values in code. Python has various types of literals - for example, a literal can be a number (numeric literals, e.g., 123), or a string (string literals, e.g., "I am a literal.").
 
 2. The binary system is a system of numbers that employs 2 as the base. Therefore, a binary number is made up of 0s and 1s only, e.g., 1010 is 10 in decimal.
@@ -87,6 +89,8 @@ The first is a string, the second is a numerical literal (a float), the third is
 %
 **
 
+### Summary
+
 Key takeaways
 1. An expression is a combination of values (or variables, operators, calls to functions ‒ you will learn about them soon) which evaluates to a certain value, e.g., 1 + 2.
 
@@ -108,3 +112,128 @@ and finally, the lowest priority: binary + and -.
 7. Subexpressions in parentheses are always calculated first, e.g., 15 - 1 * (5 * (1 + 2)) = 0.
 
 8. The exponentiation operator uses right-sided binding, e.g., 2 ** 2 ** 3 = 256.
+
+
+## Variables
+
+If you want to give a name to a variable, you must follow some strict rules:
+
+the name of the variable must be composed of upper-case or lower-case letters, digits, and the character _ (underscore)
+the name of the variable must begin with a letter;
+the underscore character is a letter;
+upper- and lower-case letters are treated as different (a little differently than in the real world – Alice and ALICE are the same first names, but in Python they are two different variable names, and consequently, two different variables);
+the name of the variable must not be any of Python's reserved words (the keywords – we'll explain more about this soon).
+
+So gibt man eine Variabel an:
+```bash
+var = 1
+print(var)
+```
+
+1. A variable is a named location reserved to store values in the memory. A variable is created or initialized automatically when you assign a value to it for the first time. (2.1.4.1)
+
+2. Each variable must have a unique name ‒ an identifier. A legal identifier name must be a non-empty sequence of characters, must begin with the underscore(_), or a letter, and it cannot be a Python keyword. The first character may be followed by underscores, letters, and digits. Identifiers in Python are case-sensitive.
+
+3. Python is a dynamically-typed language, which means you don't need to declare variables in it. (2.1.4.3) To assign values to variables, you can use a simple assignment operator in the form of the equal (=) sign, i.e., var = 1.
+
+4. You can also use compound assignment operators (shortcut operators) to modify values assigned to variables, for example: var += 1, or var /= 5 * 2.
+
+5. You can assign new values to already existing variables using the assignment operator or one of the compound operators
+
+## Comments
+
+Comments can be used to leave additional information in code. They are omitted at runtime. The information left in the source code is addressed to human readers. In Python, a comment is a piece of text that begins with #. The comment extends to the end of the line.
+
+If you want to place a comment that spans several lines, you need to place # in front of them all. Moreover, you can use a comment to mark a piece of code that is not needed at the moment (see the last line of the snippet below), for example:
+
+```bash
+# This program prints
+# an introduction to the screen.
+print("Hello!")  # Invoking the print() function
+# print("I'm Python.")
+```
+
+### Summary
+
+Whenever possible and justified, you should give self-commenting names to variables, e.g., if you're using two variables to store the length and width of something, the variable names length and width may be a better choice than myvar1 and myvar2.
+
+It's important to use comments to make programs easier to understand, and to use readable and meaningful variable names in code. However, it's equally important not to use variable names that are confusing, or leave comments that contain wrong or incorrect information!
+
+Comments can be important when you are reading your own code after some time (trust us, developers do forget what their own code does), and when others are reading your code (they can help them understand what your programs do and how they do it more quickly).
+
+## Interaction with the user
+
+### Commands
+
+**input ()**
+
+Der user soll etwas antworten, damit das Programm weiterläuft zb:
+
+```bash 
+print("Tell me anything...")
+anything = input()
+print("Hmm...", anything, "... Really?")
+``` 
+
+**int()**
+
+the int() function takes one argument (e.g., a string: int(string)) and tries to convert it into an integer; if it fails, the whole program will fail too.
+
+**float()**
+
+the float() function takes one argument (e.g., a string: float(string)) and tries to convert it into a float (the rest is the same).
+
+beispiel: 
+```bash
+leg_a = float(input("Input first leg length: "))
+leg_b = float(input("Input second leg length: "))
+print("Hypotenuse length is", (leg_a**2 + leg_b**2) ** .5)
+```
+
+**str()**
+ You can also convert a number into a string, which is way easier and safer ‒ this kind of operation is always possible.
+
+
+### Summary
+
+1. The print() function sends data to the console, while the input() function gets data from the console.
+
+2. The input() function comes with an optional parameter: the prompt string. It allows you to write a message before the user input, e.g.:
+
+```bash
+name = input("Enter your name: ")
+print("Hello, " + name + ". Nice to meet you!")
+```
+ 
+3. When the input() function is called, the program's flow is stopped, the prompt symbol keeps blinking (it prompts the user to take action when the console is switched to input mode) until the user has entered an input and/or pressed the Enter key.
+
+*Note*  
+You can test the functionality of the input() function in its full scope locally on your machine. For resource optimization reasons, we have limited the maximum program execution time in Edube to a few seconds. Go to the Sandbox, copy-paste the above snippet, run the program, and do nothing ‒ just wait a few seconds to see what happens. Your program should be stopped automatically after a short moment. Now open IDLE, and run the same program there ‒ can you see the difference?
+
+Tip: the above-mentioned feature of the input() function can be used to prompt the user to end a program. Look at the code below:
+
+```bash
+name = input("Enter your name: ")
+print("Hello, " + name + ". Nice to meet you!")
+ 
+print("\nPress Enter to end the program.")
+input()
+print("THE END.")
+```
+ 
+4. The result of the input() function is a string. You can add strings to each other using the concatenation (+) operator. Check out this code:
+
+```bash
+num_1 = input("Enter the first number: ") # Enter 12
+num_2 = input("Enter the second number: ") # Enter 21
+ 
+print(num_1 + num_2) # the program returns 1221
+```
+ 
+5. You can also multiply (* ‒ replication) strings, e.g.:
+
+```bash
+my_input = input("Enter something: ") # Example input: hello
+print(my_input * 3) # Expected output: hellohellohello
+```
+ 
