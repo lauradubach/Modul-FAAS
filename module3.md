@@ -1,4 +1,4 @@
-# Making deciisions in Python
+# Making decisions in Python
 
 = is an assignment operator, e.g., a = b assigns a with the value of b;
 == is the question are these values equal? so a == b compares a and b

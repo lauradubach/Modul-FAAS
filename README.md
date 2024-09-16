@@ -26,3 +26,6 @@ Since Monty Python is considered one of the two fundamental nutrients to a progr
 
 low-level programming (sometimes called "close to metal" programming): if you want to implement an extremely effective driver or graphical engine, you wouldn't use Python;
 applications for mobile devices: although this territory is still waiting to be conquered by Python, it will most likely happen someday.
+
+# Cheatsheet
+
