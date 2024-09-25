@@ -26,7 +26,19 @@ Floats (Gleitkommazahlen) repräsentieren Zahlen mit Dezimalstellen. Sie werden 
 Integers sind Ganzzahlen, also Zahlen ohne Dezimalstellen (z. B. -3, 0, 42). Sie werden verwendet, wenn keine Brüche oder Dezimalzahlen benötigt werden.
 
 #### Zusammengefasst:
-Booleans: Wahrheitswerte (True oder False)
-Strings: Zeichenketten (z. B. "Hallo")
-Floats: Gleitkommazahlen (z. B. 3.14)
-Integers: Ganzzahlen (z. B. 42)
+Booleans: Wahrheitswerte (`True` oder `False`)
+Strings: Zeichenketten (z. B. `"Hallo"`)
+Floats: Gleitkommazahlen (z. B. `3.14`)
+Integers: Ganzzahlen (z. B. `42`)
+
+### Tuples
+Ein Tuple in Python ist eine geordnete, unveränderliche Sammlung von Elementen. Tuples sind eine der grundlegenden Datenstrukturen in Python und ähneln Listen, allerdings mit einem wichtigen Unterschied: Tuples sind unveränderlich, was bedeutet, dass ihre Elemente nach der Erstellung nicht mehr verändert, hinzugefügt oder entfernt werden können.
+
+`mein_tuple = (1, 2, 3, 'Hallo', 4.5)`
+
+
+### Immutable
+Nicht veränderbar zb: String, Tuple
+
+### Mutable
+Veränderbar, 
